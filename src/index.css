@@ -15,6 +15,8 @@
   --color-sand: #d6995c;
   --color-coral: #ea4884;
   --animate-orbit: orbit 50s linear infinite;
+  --animate-line-shadow: line-shadow 15s linear infinite;
+
   --animate-cell-ripple: cell-ripple var(--duration, 200ms) ease-out none 1
     var(--delay, 0ms);
   @keyframes orbit {
@@ -26,6 +28,14 @@
       transform: rotate(calc(var(--angle) * 1deg + 360deg))
         translateY(calc(var(--radius) * 1px))
         rotate(calc((var(--angle) * -1deg) - 360deg));
+    }
+  }
+  @keyframes line-shadow {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% -100%;
     }
   }
 

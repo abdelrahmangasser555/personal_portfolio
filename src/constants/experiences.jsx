@@ -1,17 +1,36 @@
 import CustomBadge from "../components/customBadge";
 import { IconMoneybag } from "@tabler/icons-react";
+import { PointerHighlight } from "../components/highlight_word";
+import { Team } from "../components/team";
+import { AnimatedTeamArrow } from "../components/AnimatedTeamArrow";
+import { Brain } from "lucide-react";
 export const experiences = [
   {
     title: "Software Developer",
     job: "Platinum AI",
     date: "2021-2023",
-    icon: "/assets/logos/csharp.svg",
+    icon: <Brain className=" object-contain" />,
+    color: "black", // C# green color
+    // Optional className overrides for this specific item
+    className: "", // Custom classes for the entire timeline item
+    iconClassName: "bg-transparent", // Custom classes for the icon container
+    contentClassName: "", // Custom classes for the content area
+    dateClassName: "", // Custom classes for the date
+    titleClassName: "", // Custom classes for the title
+    jobClassName: "", // Custom classes for the job
     body: (
       <div className="space-y-3">
         <p className="mb-3 font-normal">
-          Worked as a fullstack developer at Platinum AI, a leading software
-          agency, developing enterprise-level applications and custom solutions
-          for various clients.
+          <PointerHighlight
+            rectangleClassName="bg-neutral-700  border-neutral-600"
+            pointerClassName="text-gray-400"
+          >
+            <span className="font-semibold z-10 relative text-white ">
+              fullstack developer at Platinum AI
+            </span>{" "}
+          </PointerHighlight>
+          , a leading software agency, developing enterprise-level applications
+          and custom solutions for various clients.
         </p>
         <ul className="space-y-2 list-disc list-inside">
           <li>Built scalable web applications using .NET Core and React</li>
@@ -30,25 +49,42 @@ export const experiences = [
     ),
   },
   {
-    title: "Senior Fullstack Developer",
+    title: "Technical Head",
     job: "AI-Daas",
     date: "2023-2025",
-    icon: "/assets/logos/react.svg",
+    icon: "/assets/daasLogo.svg",
+    color: "black", // React blue color
+    // Optional className overrides for this specific item
+    className: "", // Custom classes for the entire timeline item
+    iconClassName: " border-none bg-background", // Custom classes for the icon container
+    contentClassName: "", // Custom classes for the content area
+    dateClassName: "", // Custom classes for the date
+    titleClassName: "", // Custom classes for the title
+    jobClassName: "", // Custom classes for the job
     body: (
       <div className="space-y-3">
         <p className="mb-3 font-normal">
-          Senior developer at AI-Daas, an innovative startup specializing in
-          AI-powered data solutions. Led development of cutting-edge
-          applications and AI integrations.
+          <PointerHighlight
+            rectangleClassName="bg-emerald-700  border-emerald-600"
+            pointerClassName="text-emerald-400"
+          >
+            <span className="font-semibold z-10 relative text-white ">
+              Technical Head at AI-Daas
+            </span>{" "}
+          </PointerHighlight>
+          , one of the founders responsible for creating and crafting new gen AI
+          experiences. I crafted the most valuable experience practically in the
+          DaaS.
         </p>
         <ul className="space-y-2 list-disc list-inside">
-          <li>Architected and developed AI-powered web applications</li>
+          <li>Co-founded and led technical vision for AI-powered solutions</li>
           <li>
-            Implemented machine learning integrations and data processing
-            pipelines
+            Created and crafted next-generation AI experiences and integrations
           </li>
-          <li>Led technical decisions for scalable cloud-based solutions</li>
-          <li>Mentored junior developers and established coding standards</li>
+          <li>Architected scalable cloud-based AI/ML solutions</li>
+          <li>
+            Established technical standards and mentored development teams
+          </li>
         </ul>
         <div className="mt-4">
           <a
@@ -67,14 +103,42 @@ export const experiences = [
     title: "Founder & CEO",
     job: "TailoredTech",
     date: "2025-Present",
-    icon: "/assets/logos/javascript.svg",
+    icon: "/assets/T.png",
+    color: "black", // JavaScript yellow color
+    // Optional className overrides for this specific item
+    className: "", // Custom classes for the entire timeline item
+    iconClassName: " border-none rounded-xl overflow-hidden ", // Custom classes for the icon container
+    contentClassName: "", // Custom classes for the content area
+    dateClassName: "", // Custom classes for the date
+    titleClassName: "", // Custom classes for the title
+    jobClassName: "", // Custom classes for the job
     body: (
-      <div className="space-y-3">
+      <div className="space-y-3 relative">
+        {/* Team component positioned absolute on top right for laptops */}
+        <div className="absolute -top-24 right-0 hidden lg:block">
+          <AnimatedTeamArrow />
+          <Team />
+        </div>
+
         <p className="mb-3 font-normal">
-          Founded TailoredTech, a specialized software agency creating custom
-          digital experiences for maritime companies. Working with some of the
-          largest companies in the world to deliver innovative solutions.
+          <PointerHighlight
+            rectangleClassName="bg-yellow-700  border-yellow-600"
+            pointerClassName="text-yellow-400"
+          >
+            <span className="font-semibold z-10 relative text-white ">
+              Founder & CEO of TailoredTech
+            </span>{" "}
+          </PointerHighlight>
+          , a specialized software agency creating custom digital experiences
+          for maritime companies. Working with some of the largest companies in
+          the world to deliver innovative solutions.
         </p>
+
+        {/* Team component underneath title on mobile */}
+        <div className="lg:hidden mb-4 relative">
+          <AnimatedTeamArrow className="scale-75 -mb-8" />
+          <Team />
+        </div>
         <ul className="space-y-2 list-disc list-inside">
           <li>
             Building custom software solutions for maritime industry leaders

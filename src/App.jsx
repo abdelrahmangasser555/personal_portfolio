@@ -19,7 +19,7 @@ const App = () => {
       <Hero />
       <SmoothCursor />
       <About />
-      <Values />
+
       <Projects />
       <Experiences />
       <Testimonial />

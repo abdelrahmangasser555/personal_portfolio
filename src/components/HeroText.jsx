@@ -1,5 +1,6 @@
 import { FlipWords } from "./FlipWords";
 import { motion } from "motion/react";
+import { PointerHighlight } from "./highlight_word";
 
 const HeroText = () => {
   const words = ["Secure", "Modern", "Scalable"];
@@ -11,15 +12,18 @@ const HeroText = () => {
     <div className="z-10 mt-20 text-center md:mt-40 md:text-left rounded-3xl bg-clip-text">
       {/* Desktop View */}
       <div className="flex-col hidden md:flex c-space">
-        <motion.h1
-          className="text-4xl font-medium mb-5"
+        <h1
+          className="text-4xl font-medium mb-5 flex  items-center "
           variants={variants}
           initial="hidden"
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi I'm <span className=" text-5xl">Gasser</span>
-        </motion.h1>
+          Hi I'm
+          <PointerHighlight rectangleClassName="ml-2">
+            <span className=" text-5xl ml-2">Gasser</span>
+          </PointerHighlight>
+        </h1>
         <div className="flex flex-col items-start">
           <motion.p
             className="text-5xl font-medium text-neutral-300"
