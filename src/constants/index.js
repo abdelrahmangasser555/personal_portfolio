@@ -115,7 +115,7 @@ export const myProjects = [
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/game-engine.jpg",
+    image: "/assets/projects/tailoredtech.png",
     tags: [
       {
         id: 1,
@@ -144,19 +144,19 @@ export const myProjects = [
 export const mySocials = [
   {
     name: "WhatsApp",
-    href: "",
+    href: "https://wa.me/201067390078",
     icon: "/assets/socials/whatsApp.svg",
   },
   {
     name: "Linkedin",
-    href: "https://www.linkedin.com/in/gasser/",
+    href: "https://www.linkedin.com/in/abdelrahman-gasser-74571127b/",
     icon: "/assets/socials/linkedIn.svg",
   },
-  {
-    name: "Instagram",
-    href: "https://www.instagram.com/gasser.dev/",
-    icon: "/assets/socials/instagram.svg",
-  },
+  // {
+  //   name: "Instagram",
+  //   href: "https://www.instagram.com/gasser.dev/",
+  //   icon: "/assets/socials/instagram.svg",
+  // },
 ];
 
 export const reviews = [
