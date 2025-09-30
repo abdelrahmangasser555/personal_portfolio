@@ -72,17 +72,34 @@ export function FloatingDockDemo() {
     },
   ];
   return (
-    <div
-      className="w-fit h-fit p-20  fixed -bottom-30 hover:bottom-1 transition-all duration-300 left-1/2 transform -translate-x-1/2"
-      style={{
-        zIndex: 1000,
-      }}
-    >
-      <FloatingDock
-        mobileClassName="fixed bottom-0 " // only for demo, remove for production
-        items={links}
-        desktopClassName=" " // only for demo, remove for production
-      />
-    </div>
+    <>
+      {/* Desktop Floating Dock */}
+      <div
+        className="hidden md:block w-fit h-fit p-20 fixed -bottom-30 hover:bottom-1 transition-all duration-300 left-1/2 transform -translate-x-1/2"
+        style={{
+          zIndex: 1000,
+        }}
+      >
+        <FloatingDock
+          mobileClassName="hidden"
+          items={links}
+          desktopClassName="mx-auto h-16 items-end gap-4 rounded-2xl bg-gray-50 px-4 pb-3 flex dark:bg-neutral-900"
+        />
+      </div>
+
+      {/* Mobile Floating Dock */}
+      <div
+        className="block md:hidden fixed bottom-4 right-4 "
+        style={{
+          zIndex: 1000,
+        }}
+      >
+        <FloatingDock
+          mobileClassName="relative block"
+          items={links}
+          desktopClassName="hidden"
+        />
+      </div>
+    </>
   );
 }

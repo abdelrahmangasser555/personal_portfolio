@@ -1,6 +1,24 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
+import { useImagePreloader } from "../lib/utils/imagePreloader";
+import { useEffect } from "react";
 
-const ParallaxBackground = () => {
+const ParallaxBackground = ({ onImagesLoaded }) => {
+  // Array of all background images used in this component
+  const backgroundImages = [
+    "/assets/sky.jpg",
+    "/assets/mountain-3.png",
+    "/assets/planets.png",
+    "/assets/mountain-2.png",
+    "/assets/mountain-1.png",
+  ];
+
+  const isImagesLoading = useImagePreloader(backgroundImages);
+
+  useEffect(() => {
+    if (!isImagesLoading && onImagesLoaded) {
+      onImagesLoaded();
+    }
+  }, [isImagesLoading, onImagesLoaded]);
   const { scrollYProgress } = useScroll();
   const x = useSpring(scrollYProgress, { damping: 50 });
   const mountain3Y = useTransform(x, [0, 0.5], ["0%", "70%"]);

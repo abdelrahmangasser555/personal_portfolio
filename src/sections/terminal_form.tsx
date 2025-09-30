@@ -164,7 +164,7 @@ export function TerminalForm() {
   };
 
   return (
-    <div className="mt-20 mb-20 w-full" id="contact">
+    <div className="mt-20 mb-20 w-full min-h-screen md:min-h-0" id="contact">
       {/* ASCII Art Banner */}
       <div className="mb-8 flex justify-center">
         <ASCIIArt text="GASSER'S PORTFOLIO" delay={0} />

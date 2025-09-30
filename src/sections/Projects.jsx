@@ -25,7 +25,7 @@ const Projects = () => {
         pointerClassName="text-yellow-400"
         containerClassName="flex items-center gap-3 mb-6 text-3xl font-bold text-white md:mb-10 md:text-5xl"
       >
-        <Layers className="  font-semibold z-10" size={40} />
+        <Layers className="  font-semibold z-10" size={35} />
         <h2 className="text-heading font-semibold z-10 relative">
           My Selected Projects
         </h2>
