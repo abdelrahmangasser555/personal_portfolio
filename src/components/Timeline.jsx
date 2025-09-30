@@ -32,8 +32,16 @@ export const Timeline = ({ data }) => {
             className="flex justify-start pt-10 md:pt-40 md:gap-10"
           >
             <div className="sticky z-40 flex flex-col items-center self-start max-w-xs md:flex-row top-40 lg:max-w-sm md:w-full">
-              <div className="absolute flex items-center justify-center w-10 h-10 rounded-full -left-[15px] bg-midnight">
-                <div className="w-4 h-4 p-2 border rounded-full bg-neutral-800 border-neutral-700" />
+              <div className="absolute flex items-center justify-center w-12 h-12 rounded-full -left-[19px] bg-gradient-to-br from-purple-500 to-lavender shadow-lg border-2 border-purple-400/30">
+                {typeof item.icon === "string" ? (
+                  <img
+                    src={item.icon}
+                    alt={item.title}
+                    className="w-6 h-6 object-contain filter brightness-0 invert"
+                  />
+                ) : (
+                  <div className="w-6 h-6 text-white">{item.icon}</div>
+                )}
               </div>
               <div className="flex-col hidden gap-2 text-xl font-bold md:flex md:pl-20 md:text-4xl text-neutral-300">
                 <h3>{item.date}</h3>
@@ -47,11 +55,7 @@ export const Timeline = ({ data }) => {
                 <h3>{item.date}</h3>
                 <h3>{item.job}</h3>
               </div>
-              {item.contents.map((content, index) => (
-                <p className="mb-3 font-normal text-neutral-400" key={index}>
-                  {content}
-                </p>
-              ))}
+              <div className="text-neutral-400">{item.body}</div>
             </div>
           </div>
         ))}

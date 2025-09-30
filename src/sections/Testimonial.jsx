@@ -46,8 +46,8 @@ export default function Testimonial() {
             <ReviewCard key={review.username} {...review} />
           ))}
         </Marquee>
-        <div className="absolute inset-y-0 left-0 w-1/4 pointer-events-none bg-gradient-to-r from-primary"></div>
-        <div className="absolute inset-y-0 right-0 w-1/4 pointer-events-none bg-gradient-to-l from-primary"></div>
+        <div className="absolute inset-y-0 left-0 w-1/4 pointer-events-none bg-gradient-to-r from-black"></div>
+        <div className="absolute inset-y-0 right-0 w-1/4 pointer-events-none bg-gradient-to-l from-black"></div>
       </div>
     </div>
   );

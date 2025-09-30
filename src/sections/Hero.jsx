@@ -34,7 +34,7 @@ const Hero = () => {
   );
 };
 
-function Rig() {
+export function Rig() {
   return useFrame((state, delta) => {
     easing.damp3(
       state.camera.position,

@@ -6,19 +6,28 @@ import Projects from "./sections/Projects";
 import Experiences from "./sections/Experiences";
 import Testimonial from "./sections/Testimonial";
 import Contact from "./sections/Contact";
-import Footer from './sections/Footer';
-
+import Footer from "./sections/Footer";
+import { SparklesPreview } from "./sections/footer_sparcles";
+import { BackgroundRippleEffect } from "./components/background-ripple-effect";
+import { FloatingDockDemo } from "./sections/floating_dock_data";
+import { SmoothCursor } from "./components/smooth_cursur";
+import { Values } from "./sections/values";
+import { GasserProfileImage } from "./sections/pixeled_profile_image";
 const App = () => {
   return (
     <div className="container mx-auto max-w-7xl">
-      <Navbar />
       <Hero />
+      <SmoothCursor />
       <About />
+      <Values />
       <Projects />
       <Experiences />
       <Testimonial />
       <Contact />
-      <Footer/>
+      <FloatingDockDemo />
+      <GasserProfileImage />
+      <SparklesPreview />
+      <Footer />
     </div>
   );
 };
