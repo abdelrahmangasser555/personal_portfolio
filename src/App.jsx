@@ -13,7 +13,7 @@ import { SmoothCursor } from "./components/smooth_cursur";
 import { GasserProfileImage } from "./sections/pixeled_profile_image";
 const App = () => {
   return (
-    <div className="container mx-auto max-w-7xl">
+    <div className="container mx-auto max-w-screen overflow-hidden ">
       <Hero />
       <SmoothCursor />
       <About />
