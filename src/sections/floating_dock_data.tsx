@@ -89,7 +89,7 @@ export function FloatingDockDemo() {
 
       {/* Mobile Floating Dock */}
       <div
-        className="block md:hidden fixed bottom-4 right-4 "
+        className="block md:hidden fixed bottom-4 left-4 "
         style={{
           zIndex: 1000,
         }}

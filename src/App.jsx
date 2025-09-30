@@ -31,7 +31,7 @@ const App = () => {
           <Testimonial />
           <Contact />
           <FloatingDockDemo />
-          {/* <GasserProfileImage /> */}
+          <GasserProfileImage />
           <SparklesPreview />
           <Footer />
         </>
