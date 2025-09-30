@@ -18,6 +18,7 @@ const Projects = () => {
     <section
       onMouseMove={handleMouseMove}
       className="relative c-space section-spacing"
+      id="projects"
     >
       <PointerHighlight
         rectangleClassName="bg-yellow-700  border-yellow-600 border-dashed"

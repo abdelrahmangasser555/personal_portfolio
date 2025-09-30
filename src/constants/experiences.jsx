@@ -136,7 +136,7 @@ export const experiences = [
 
         {/* Team component underneath title on mobile */}
         <div className="lg:hidden mb-4 relative">
-          <AnimatedTeamArrow className="scale-75 -mb-8" />
+          <AnimatedTeamArrow className="scale-75 " />
           <Team />
         </div>
         <ul className="space-y-2 list-disc list-inside">

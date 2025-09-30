@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ProjectDetails from "./ProjectDetails";
+import TechStack from "./TechStack";
 
 const Project = ({
   title,
@@ -19,11 +20,9 @@ const Project = ({
         onMouseLeave={() => setPreview(null)}
       >
         <div>
-          <p className="text-2xl">{title}</p>
-          <div className="flex gap-5 mt-2 text-sand">
-            {tags.map((tag) => (
-              <span key={tag.id}>{tag.name}</span>
-            ))}
+          <p className="text-2xl font-bold">{title}</p>
+          <div className="mt-3">
+            <TechStack tags={tags} />
           </div>
         </div>
         <button
