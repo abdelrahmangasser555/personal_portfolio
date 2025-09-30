@@ -13,6 +13,7 @@ import { FloatingDockDemo } from "./sections/floating_dock_data";
 import { SmoothCursor } from "./components/smooth_cursur";
 import { Values } from "./sections/values";
 import { GasserProfileImage } from "./sections/pixeled_profile_image";
+import { TerminalForm } from "./sections/terminal_form";
 const App = () => {
   return (
     <div className="container mx-auto max-w-7xl">
@@ -24,6 +25,7 @@ const App = () => {
       <Experiences />
       <Testimonial />
       <Contact />
+      <TerminalForm />
       <FloatingDockDemo />
       <GasserProfileImage />
       <SparklesPreview />
