@@ -1,3 +1,4 @@
+import { Particles } from "../components/Particles";
 import { TerminalFormExperience, ASCIIArt } from "../components/terminal";
 
 // Enhanced email validation function
@@ -163,7 +164,7 @@ export function TerminalForm() {
   };
 
   return (
-    <div className="mt-20 mb-20">
+    <div className="mt-20 mb-20 w-full" id="contact">
       {/* ASCII Art Banner */}
       <div className="mb-8 flex justify-center">
         <ASCIIArt text="GASSER'S PORTFOLIO" delay={0} />

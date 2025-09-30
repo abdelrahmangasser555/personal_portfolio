@@ -356,7 +356,8 @@ export const TerminalInput = ({
   useEffect(() => {
     if (hasStarted && autoFocus && inputRef.current && !disabled) {
       const timer = setTimeout(() => {
-        inputRef.current?.focus();
+        // todo auto focus when component starts
+        // inputRef.current?.focus();
       }, 100);
       return () => clearTimeout(timer);
     }
@@ -583,13 +584,13 @@ export const ASCIIArt = ({ text, className, delay = 0 }: ASCIIArtProps) => {
 
   return (
     <TypingAnimation
-      duration={15}
+      duration={1}
       delay={delay}
       className={cn(
         "text-cyan-400 font-mono text-xs leading-tight whitespace-pre",
         className
       )}
-      startOnView={false}
+      startOnView={true}
     >
       {asciiArt}
     </TypingAnimation>
@@ -821,7 +822,6 @@ export const TerminalFormExperience = ({
               delay={100}
               startOnView={false}
             >
-              <span className="mr-2">⚠️</span>
               {item.error}
             </AnimatedSpan>
           )}

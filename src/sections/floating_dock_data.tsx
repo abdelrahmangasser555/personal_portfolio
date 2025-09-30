@@ -2,17 +2,19 @@ import React from "react";
 import { FloatingDock } from "../components/floatingDock";
 import {
   IconBrandGithub,
+  IconBrandLinkedin,
   IconBrandX,
   IconExchange,
   IconHome,
   IconNewSection,
   IconTerminal2,
 } from "@tabler/icons-react";
+import { FileUser, PanelsTopLeft } from "lucide-react";
 
 export function FloatingDockDemo() {
   const links = [
     {
-      title: "Home",
+      title: "Experience",
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
@@ -20,60 +22,66 @@ export function FloatingDockDemo() {
     },
 
     {
-      title: "Products",
+      title: "Terminal",
       icon: (
         <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#contact",
     },
     {
-      title: "Components",
+      title: "Projects",
       icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <PanelsTopLeft className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#projects",
     },
     {
-      title: "Aceternity UI",
+      title: "My Agency",
       icon: (
         <img
-          src="https://assets.aceternity.com/logo-dark.png"
-          width={20}
-          height={20}
-          alt="Aceternity Logo"
+          src="/assets/T.png"
+          width={30}
+          height={30}
+          className="rounded-md"
+          alt="Tailoredtech"
         />
       ),
-      href: "#",
+      href: "https://tailoredtech.tech/",
     },
     {
-      title: "Changelog",
+      title: "CV",
       icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <FileUser className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://www.linkedin.com/in/abdelrahman-gasser-74571127b/",
+    },
+    {
+      title: "LinkedIn",
+      icon: (
+        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://www.linkedin.com/in/abdelrahman-gasser-74571127b/",
     },
 
-    {
-      title: "Twitter",
-      icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
     {
       title: "GitHub",
       icon: (
         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://github.com/abdelrahmangasser555",
     },
   ];
   return (
-    <div className="w-fit h-fit p-20  fixed -bottom-30 hover:bottom-1 transition-all duration-300 left-1/2 transform -translate-x-1/2">
+    <div
+      className="w-fit h-fit p-20  fixed -bottom-30 hover:bottom-1 transition-all duration-300 left-1/2 transform -translate-x-1/2"
+      style={{
+        zIndex: 1000,
+      }}
+    >
       <FloatingDock
         mobileClassName="fixed bottom-0 " // only for demo, remove for production
         items={links}
-        desktopClassName="" // only for demo, remove for production
+        desktopClassName=" " // only for demo, remove for production
       />
     </div>
   );
