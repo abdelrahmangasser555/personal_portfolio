@@ -38,13 +38,17 @@ export const Timeline = ({
     <div
       className={`c-space section-spacing ${containerClassName}`}
       ref={containerRef}
+      id="experience"
     >
-      <PointerHighlight>
+      <PointerHighlight
+        rectangleClassName="bg-purple-700  border-purple-600 border-dashed"
+        pointerClassName="text-purple-400"
+      >
         <div
           className={`flex items-center gap-3 mb-6 text-3xl font-bold text-white md:mb-10 md:text-5xl ${headerClassName}`}
         >
-          <Sparkles size={45} className="" />
-          <h2 className="text-heading">My Work Experience</h2>
+          <Sparkles size={45} className="z-10" />
+          <h2 className="text-heading z-10">My Work Experience</h2>
         </div>
       </PointerHighlight>
       <div ref={ref} className="relative pb-20">

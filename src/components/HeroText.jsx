@@ -20,8 +20,11 @@ const HeroText = () => {
           transition={{ delay: 1 }}
         >
           Hi I'm
-          <PointerHighlight rectangleClassName="ml-2">
-            <span className=" text-5xl ml-2">Gasser</span>
+          <PointerHighlight
+            rectangleClassName="ml-1 border-dashed bg-[#6C244B]/40 backdrop-blur-xl  border-yellow-600 "
+            pointerClassName="text-[#EFA3B7]"
+          >
+            <span className=" text-5xl ml-2 z-10 relative">Gasser</span>
           </PointerHighlight>
         </h1>
         <div className="flex flex-col items-start">
