@@ -10,8 +10,9 @@ export function OrbitingCircles({
   path = true,
   iconSize = 30,
   speed = 1,
+  strokeWidth = 1,
   ...props
-}) {
+}: any) {
   const calculatedDuration = duration / speed;
   return (
     <>
@@ -22,11 +23,12 @@ export function OrbitingCircles({
           className="absolute inset-0 pointer-events-none size-full"
         >
           <circle
-            className="stroke-1 stroke-white/10"
+            className="stroke-white/10"
             cx="50%"
             cy="50%"
             r={radius}
             fill="none"
+            strokeWidth={strokeWidth}
           />
         </svg>
       )}
