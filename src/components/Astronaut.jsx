@@ -11,7 +11,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 import { useMotionValue, useSpring } from "motion/react";
 import { useFrame } from "@react-three/fiber";
 
-export function Astronaut(props) {
+export function Astronaut({ setLoading, ...props }) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(
     "/models/tenhun_falling_spaceman_fanart.glb"
@@ -19,6 +19,8 @@ export function Astronaut(props) {
   const { actions } = useAnimations(animations, group);
   useEffect(() => {
     if (animations.length > 0) {
+      console.log("Playing animation:", animations[0].name);
+      setLoading(false);
       actions[animations[0].name]?.play();
     }
   }, [actions, animations]);
