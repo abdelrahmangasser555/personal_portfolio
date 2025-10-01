@@ -24,10 +24,29 @@ const HeroText = () => {
             rectangleClassName="ml-1 border-dashed bg-[#6C244B]/40 backdrop-blur-xl  border-yellow-600 "
             pointerClassName="text-[#EFA3B7]"
           >
-            <span className=" text-5xl ml-2 z-10 relative">Gasser</span>
+            <span className=" text-5xl ml-2 z-10 relative text-purple-400">
+              Gasser
+            </span>
           </PointerHighlight>
         </h1>
         <div className="flex flex-col items-start">
+          <motion.p
+            className="text-5xl font-medium text-neutral-300 flex items-center"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 1.2 }}
+          >
+            A Tech
+            <PointerHighlight
+              rectangleClassName=" ml-1 bg-yellow-700  border-yellow-600 relative z-10"
+              pointerClassName="text-yellow-400"
+            >
+              <span className="text-5xl ml-2 z-10 relative text-yellow-400">
+                Entrepreneur
+              </span>
+            </PointerHighlight>
+          </motion.p>
           <motion.p
             className="text-5xl font-medium text-neutral-300"
             variants={variants}
@@ -35,7 +54,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.2 }}
           >
-            A Tech Entrepreneur <br /> Dedicated to Crafting
+            Dedicated to Crafting
           </motion.p>
           <motion.div
             variants={variants}
@@ -60,19 +79,27 @@ const HeroText = () => {
         </div>
       </div>
       {/* Mobile View */}
-      <div className="flex- flex-col space-y-6 md:hidden">
+      <div className="flex flex-col items-center space-y-4 md:hidden w-full max-w-sm mx-auto h-96 overflow-hidden px-4">
         <motion.p
-          className="text-4xl font-medium"
+          className="text-3xl font-medium"
           variants={variants}
           initial="hidden"
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi,I'm Gasser
+          Hi, I'm
+          <PointerHighlight
+            rectangleClassName="ml-1 border-dashed bg-[#6C244B]/40 backdrop-blur-xl  border-yellow-600 "
+            pointerClassName="text-[#EFA3B7]"
+          >
+            <span className=" text-5xl ml-2 z-10 relative text-purple-400">
+              Gasser
+            </span>
+          </PointerHighlight>
         </motion.p>
-        <div>
+        <div className="flex flex-col space-y-2">
           <motion.p
-            className="text-5xl font-black text-neutral-300"
+            className="text-4xl font-black text-neutral-300"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -85,14 +112,20 @@ const HeroText = () => {
             initial="hidden"
             animate="visible"
             transition={{ delay: 1.5 }}
+            className="  "
           >
-            <FlipWords
-              words={words}
-              className="font-bold text-white text-7xl"
-            />
+            <PointerHighlight
+              rectangleClassName="bg-yellow-700  border-yellow-600"
+              pointerClassName="text-yellow-400"
+            >
+              <h1 className="font-black text-5xl  relative z-10 text-yellow-400">
+                Legendary
+              </h1>
+            </PointerHighlight>
           </motion.div>
+
           <motion.p
-            className="text-4xl font-black text-neutral300"
+            className="text-3xl font-black text-neutral-300"
             variants={variants}
             initial="hidden"
             animate="visible"
