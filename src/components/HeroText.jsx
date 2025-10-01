@@ -39,7 +39,7 @@ const HeroText = () => {
           >
             A Tech
             <PointerHighlight
-              rectangleClassName=" ml-1 bg-yellow-700  border-yellow-600 relative z-10"
+              rectangleClassName=" ml-1 bg-yellow-700  border-yellow-600 relative z-10 border-dashed"
               pointerClassName="text-yellow-400"
             >
               <span className="text-5xl ml-2 z-10 relative text-yellow-400">
@@ -115,7 +115,7 @@ const HeroText = () => {
             className="  "
           >
             <PointerHighlight
-              rectangleClassName="bg-yellow-700  border-yellow-600"
+              rectangleClassName="bg-yellow-700  border-yellow-600 border-dashed"
               pointerClassName="text-yellow-400"
             >
               <h1 className="font-black text-5xl  relative z-10 text-yellow-400">

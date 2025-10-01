@@ -48,13 +48,13 @@ export function FloatingDockDemo() {
       ),
       href: "https://tailoredtech.tech/",
     },
-    {
-      title: "CV",
-      icon: (
-        <FileUser className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "https://www.linkedin.com/in/abdelrahman-gasser-74571127b/",
-    },
+    // {
+    //   title: "CV",
+    //   icon: (
+    //     <FileUser className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    //   ),
+    //   href: "https://www.linkedin.com/in/abdelrahman-gasser-74571127b/",
+    // },
     {
       title: "LinkedIn",
       icon: (

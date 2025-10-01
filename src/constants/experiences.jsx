@@ -22,7 +22,7 @@ export const experiences = [
       <div className="space-y-3">
         <p className="mb-3 font-normal">
           <PointerHighlight
-            rectangleClassName="bg-neutral-700  border-neutral-600"
+            rectangleClassName="bg-neutral-700  border-neutral-600 border-dashed"
             pointerClassName="text-gray-400"
           >
             <span className="font-semibold z-10 relative text-white ">
@@ -65,10 +65,10 @@ export const experiences = [
       <div className="space-y-3">
         <p className="mb-3 font-normal">
           <PointerHighlight
-            rectangleClassName="bg-emerald-700  border-emerald-600"
+            rectangleClassName="bg-emerald-700  border-emerald-600 border-dashed"
             pointerClassName="text-emerald-400"
           >
-            <span className="font-semibold z-10 relative text-white ">
+            <span className="font-semibold z-10 relative text-green-400 ">
               Technical Head at AI-Daas
             </span>{" "}
           </PointerHighlight>
@@ -122,10 +122,10 @@ export const experiences = [
 
         <p className="mb-3 font-normal">
           <PointerHighlight
-            rectangleClassName="bg-yellow-700  border-yellow-600"
+            rectangleClassName="bg-yellow-700  border-yellow-600 border-dashed"
             pointerClassName="text-yellow-400"
           >
-            <span className="font-semibold z-10 relative text-white ">
+            <span className="font-semibold z-10 relative text-yellow-400 ">
               Founder & CEO of TailoredTech
             </span>{" "}
           </PointerHighlight>
