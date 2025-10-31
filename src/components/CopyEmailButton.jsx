@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 const CopyEmailButton = () => {
   const [copied, setCopied] = useState(false);
-  const email = "Your Email Address";
+  const email = "abdelrahmangasser2023@gmail.com";
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(email);
@@ -40,6 +40,9 @@ const CopyEmailButton = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.1 }}
+            onClick={() => {
+              copyToClipboard();
+            }}
           >
             <img src="assets/copy.svg" className="w-5" alt="copy icon" />
             Copy Email Address
